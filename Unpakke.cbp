@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Unpakke" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Unpakke" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Debug" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Unpakke" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-m32" />
+					<Add option="-m32" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-m32" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add option="-F pe-i386" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="-m32" />
+			<Add option="-mconsole" />
+			<Add option="-mwindows" />
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+			<Add library="shlwapi" />
+			<Add library="wininet" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/upkkAdler32.cpp" />
+		<Unit filename="src/upkkAllocBuffer.cpp" />
+		<Unit filename="src/upkkCRC32.cpp" />
+		<Unit filename="src/upkkCloseStorage.cpp" />
+		<Unit filename="src/upkkCompressBuffer.cpp" />
+		<Unit filename="src/upkkCountFiles.cpp" />
+		<Unit filename="src/upkkCreateDirectory.cpp" />
+		<Unit filename="src/upkkDecompressBuffer.cpp" />
+		<Unit filename="src/upkkExtractData.cpp" />
+		<Unit filename="src/upkkExtractFile.cpp" />
+		<Unit filename="src/upkkGetData.cpp" />
+		<Unit filename="src/upkkGetOffset.cpp" />
+		<Unit filename="src/upkkINIGetInt.cpp" />
+		<Unit filename="src/upkkINIGetString.cpp" />
+		<Unit filename="src/upkkInsertData.cpp" />
+		<Unit filename="src/upkkInsertFile.cpp" />
+		<Unit filename="src/upkkOpenStorage.cpp" />
+		<Unit filename="src/upkkRawCloseFile.cpp" />
+		<Unit filename="src/upkkRawCreateFile.cpp" />
+		<Unit filename="src/upkkRawReadFile.cpp" />
+		<Unit filename="src/upkkRawWriteFile.cpp" />
+		<Unit filename="src/upkkReadFile.cpp" />
+		<Unit filename="src/upkkReleaseBuffer.cpp" />
+		<Unit filename="src/upkkXORBuffer.cpp" />
+		<Unit filename="unpakke.exe.manifest" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
